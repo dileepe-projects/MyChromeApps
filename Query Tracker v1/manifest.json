@@ -1,0 +1,17 @@
+{
+  "name": "Query Tracker",
+  "description": "Log and Track your project queries",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"]
+    }
+  },
+  "permissions": [
+    {"fileSystem": ["write"]},
+    "storage"
+  ],
+  "icons": { "16": "css/images/Letter-Q-icon.png", "128": "css/images/Letter-Q-icon.png" }
+
+}

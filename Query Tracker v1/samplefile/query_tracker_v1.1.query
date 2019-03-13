@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queryfile>
+<prid>1234</prid>
+<prname>xyz</prname>
+<version>1.1</version>
+<author>dileep.ekambaram@live.com</author>
+<lastupdatedby>dileep.ekambaram@live.com</lastupdatedby>
+<lastupdatedate>04/22/2016</lastupdatedate>
+<Query>
+	<sno>1</sno>
+	<question>What is your name?</question>
+	<comments>Dileep Ekambaram</comments>
+	<openeddate>04/13/2016</openeddate>
+	<status>open</status>
+	<pendingwith>Dileep</pendingwith>
+	<closeddate>NA</closeddate>
+</Query>
+<Query>
+	<sno>2</sno>
+	<question>Who is your favourite cricketer?</question>
+	<comments>Sachin</comments>
+	<openeddate>04/11/2016</openeddate>
+	<status>Open</status>
+	<pendingwith>Dileep</pendingwith>
+	<closeddate>NA</closeddate>
+</Query>
+<Query>
+<sno>1</sno>
+<question>What is the use of this app?</question>
+<comments>Get your queries answered frome team members</comments>
+<openeddate>02/05/2016</openeddate>
+<status>closed</status>
+<pendingwith>NA</pendingwith>
+<closeddate>02/16/2016</closeddate>
+</Query>
+<Query>
+<sno>2</sno>
+<question>Why do we need an app for it, if we could use several collaboration tools or message</question>
+<comments>Dileep: I'm Just playing around with chrome offline apps [-_-]</comments>
+<openeddate>02/06/2016</openeddate>
+<status>closed</status>
+<pendingwith>N/A</pendingwith>
+<closeddate>04/22/2016</closeddate>
+</Query>
+</queryfile>

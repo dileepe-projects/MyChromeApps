@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Query Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">  
+  <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">  
+  <link href="css/jquery-ui.structure.css" rel="stylesheet" type="text/css">  
+  <link href="css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">  
+  <link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css">  
+  <link href="css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">  
+
+
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"><img src="css/images/Letter-Q-icon.png" style = "width:32px">uery Tracker</a>
+    </div>
+
+    <div id = "loginbar">
+    <ul class="nav navbar-nav navbar-right">   
+        
+      <li><a data-toggle="modal" data-target="#loginModal" style="cursor: pointer"><span class="glyphicon glyphicon-log-in"></span > Login</a></li>
+    </ul>
+  </div>
+  <div id = "newloginbar" style="display:none">   
+    <ul class="nav navbar-nav navbar-right">   
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">File<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" style="cursor: pointer"><span class="glyphicon glyphicon-edit" aria-hidden="true"> </span>  New</a></li>
+          <li><a id="choose_file" style="cursor: pointer"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"> </span>  Open</a></li>          
+          <li><a id="close_file" style="display:none"><span class="glyphicon glyphicon-folder-close" aria-hidden="true"> </span>  Close</a></li>
+        </ul>
+      </li> 
+      <li><a><span  id="user">Guest</span></a></li>        
+    </ul>
+  </div>
+  </div>
+</nav>  
+<div class="container" >
+          <br><br><br><br>
+          <div class="panel panel-primary" id = "oldfiledetails" style = "display: none">
+
+                      <div class="panel-heading"><span id="pr_id"></span> - <span id="pr_name"></span><br><span>(Location: </span>
+                                <span id="file_path"></span><span>)</span>
+                                </div>
+                       <div class="panel-body">                      
+                                <label>Size: </label>
+                                <span id="file_size"></span> bytes</span> <label>Version: </label>
+                                <span id="file_version"></span>
+                                <br>
+                                <label>Last Updated by: </label>
+                                <a href="#" id="lastupdated_by"></a> on <span id="lastupdated_at"></span>                                          
+                      </div>
+
+                       <div id = "hiddendiv" style = "display: none">
+                        <div class = "temp"> 
+                                          </div>
+                      </div>
+
+
+
+                 <div class="panel-footer">
+                         
+                    <div class="panel-group" id="accordion">
+                          
+                          <div class="panel panel-default">
+                                      <div class="panel-heading">  
+                                          <span class="glyphicon glyphicon-pencil" aria-hidden="true" ></span>
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Open Queries <span id = "tableopenbg" class="badge" style="background-color:#E21B37; position: relative;left: 100px;"></a>                    
+                                      </div>
+                                      <div id="collapseOne" class="panel-collapse collapse">
+                                        
+                                        <div class="panel-body" id = "tableopenq">   
+                                          <div class = "temp"> 
+                                          </div>                                       
+                                        </div>
+                                      </div>
+                          </div>  
+                          <div class="panel panel-default">
+                                      <div class="panel-heading">  
+                                          <span class="glyphicon glyphicon-pencil" aria-hidden="true" ></span>
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Closed Queries <span id = "tableclosebg" class="badge" style="background-color:#2B882E; position: relative;left: 91px;"></a>                    
+                                      </div>
+                                      <div id="collapseTwo" class="panel-collapse collapse">
+                                        
+                                        <div class="panel-body" id = "tablecloseq">   
+                                          <div class = "temp"> 
+                                          </div>                                       
+                                        </div>
+                                      </div>
+                          </div>
+                    </div>
+
+
+                     <div class = "finalbuttons">
+                      <button id = "newQuery" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Submit New Query</button> 
+                      <button id = "newversionsave" class="btn btn-save" disabled = "true"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true" ></span> Save To New Version</button> 
+                     </div>
+                     
+
+                </div>
+
+               </div>  
+ 
+      <output class="msgclass"></output>
+ 
+</div>
+
+<!-- login Window -->
+ <!-- Modal -->
+  <div class="modal fade" id="loginModal" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal1-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+         <div class="modal-body">          
+               <div class="col-md-4">
+                     <div id = "msgdiv" style = "display:none">
+                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style = "color:red"></span>                                     
+                        <span id="msg" class="msgclass">
+                     </div>
+                     <label class="glyphicon glyphicon-user"></label>
+                     <input id="emailid" type="email" class="login-ui" name="emailid" value="" placeholder="EMAIL ID">  
+                     <button id = "login" class="btn btn-login">Login</button>               
+              </div>         
+         </div> 
+         <div class="modal1-footer">
+
+         </div>       
+      </div>
+    </div>
+  </div>
+
+  <!--successful save window -->
+
+  <div class="modal fade" id="savesuccessModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="alert alert-success">
+              <strong>Success! File saved</strong> Do you want to open the file?.
+          </div>
+        </div>
+        <div class="modal-footer">
+              <button id = "yes" class="btn btn-success">Yes</button>  
+              <button id = "no" class="btn btn-danger">No</button>  
+         </div> 
+      </div>
+    </div>
+  </div>
+
+  <div id = "qmodals">
+    <div class = "temp"> 
+                                          </div>   
+  </div>
+
+
+ 
+
+
+  <script src="js/jquery.js"></script>  
+  <script src="js/jquery-1.11.2.min.js"></script>  
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+  <script src="js/config/user.js"></script>
+  <script src="js/config/filereader.js"></script>
+  <script src="js/config/savetonew.js"></script>
+  
+</body>
+</html>
