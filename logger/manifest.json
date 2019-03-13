@@ -1,0 +1,15 @@
+{
+  "name": "Logger APP",
+  "description": "Log your day to day activities",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["js/external/moment-with-locales.js","js/app/background.js","js/app/remainder.js" ]
+    }
+  },
+  
+  "icons": { "16": "css/external/images/logger.png", "128": "css/external/images/logger.png" },
+  "permissions": ["storage", "alarms", "notifications"]
+
+}

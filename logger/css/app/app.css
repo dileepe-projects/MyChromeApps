@@ -1,0 +1,332 @@
+html, body {
+    overflow-y: visible;
+}
+ 
+ .modal-header1 {
+           padding-right: 8px;
+    padding-top: 8px;
+}
+
+.panel-body {
+       overflow-y: scroll;
+    height: 397px;
+    margin-top: -30px;
+}
+
+
+#textArea{
+        width: 350px;
+		    height: 65px;
+}
+
+#submitbttn {
+     margin-left: 280px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.logmsgs {
+   white-space: pre-wrap;
+    background-color: #91CFE6;
+    color: white;
+    border: white;
+    border-radius: 20px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-family: calibri;
+    font-size: large;
+}
+
+.bubble-border.left {
+   white-space: pre-wrap;
+    margin-left: 10px;
+    font-size: small;
+    word-wrap: break-word;     
+}
+
+.bubble-border {
+    position: relative;
+    padding: 10px;
+    margin: 1em 0 0em;
+    border: 3px solid #04B0EF;
+    color: #333;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	    font-size: small;
+}
+
+span[id*="divclose"] {
+ float:right;
+    display:inline-block;
+    padding: 1px 5px;
+    font-size: smaller;
+
+}
+
+span[id*="divclose"]:hover {
+  float:right;
+    display:inline-block;
+    padding: 1px 5px;   
+    color: #CC2121;
+	font-size: smaller;
+	cursor: pointer;
+
+}
+
+span[id*="divedit"] {
+ float:right;
+    display:inline-block;
+    padding: 1px 5px;
+    font-size: smaller;
+}
+
+span[id*="divedit"]:hover{
+float:right;
+    display:inline-block;
+    padding: 1px 5px;
+    font-size: smaller;
+	    color: #36771C;
+		cursor: pointer;
+
+}
+
+
+span[id*="divflag"]{
+    float:right;
+    display:inline-block;
+    padding: 1px 5px;
+    font-size: smaller;
+	  
+}
+
+span[id*="divflag"]:hover {
+    float:right;
+    display:inline-block;
+    padding: 1px 5px;   
+    color: #CC2121;
+	font-size: smaller;
+	cursor: pointer;
+	  
+}
+
+
+.flagged.left {
+    white-space: pre-wrap;
+    margin-left: 10px;
+    font-size: small;
+    word-wrap: break-word;
+}
+
+.flagged {
+    position: relative;
+    padding: 10px;
+    margin: 1em 0 0em;
+    border: 3px solid #EF0432;
+    color: #333;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	    font-size: small;
+}
+.headerdiv{
+border-style: hidden;
+    padding: 10px;
+    background-color: #04B0EF;
+    color: white;
+}
+
+.header {
+
+    font-weight: bold;
+    font-size: 20px;
+
+}
+#logas {
+    padding-left: 220px;
+    cursor: pointer;
+    font-size: smaller;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #F3ECEC;
+    background-color: #04B0EF;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    margin-left: 10px;
+}
+
+
+#glyuser {
+    padding-left: 260px;     
+}
+
+#glysett{
+    font-size: smaller;   
+    padding-left: 252px;
+}
+
+#glysearch{
+    font-size: smaller;   
+}
+
+.form-control {
+font-size: 12px;
+}
+
+.alert-danger {
+font-size: small;
+
+}
+#errtype {
+
+font-weight: bold;
+}
+
+#lastlogin {
+        font-size: 10px;
+    padding-left: 146px;
+    font-weight: bold;
+}
+
+.timespan {
+   font-size: 9px;
+    font-weight: bold;    
+   padding-left: 220px;
+}
+
+
+.input-large {
+   
+       width: 91%;   
+    padding: 6px 12px;
+    font-size: 14px;  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);   
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+   
+}
+
+button[id*="setremainder"]{
+       margin-left: 25px;
+
+}
+button[id*="cancelremainder"]{
+      margin-left: 5px;
+
+}
+
+/*#search {
+
+   z-index: 2;
+    float: left;
+    width: 60%;
+    height: 30px;
+    margin-top: -28px;
+    margin-left: 100px;
+
+}
+
+#searchbutton {
+
+       
+       margin-top: -28px;
+    height: 30px;
+
+}*/
+
+
+#reminders {
+
+            margin-left: 1px;
+	
+}
+
+.rem{
+
+    font-size: 10px;
+    font-weight: bold;
+
+}
+
+#remtext {
+font-size: 12px;
+    font-weight: bold;
+
+}
+
+.btn-xs, .btn-group-xs>.btn {
+    
+        font-size: 10px;
+    
+    
+}
+
+
+.table1>thead>tr>th, .table1>tbody>tr>th, .table1>tfoot>tr>th, .table1thead>tr>td, .table1>tbody>tr>td, .table1>tfoot>tr>td {
+    padding: 6px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.bubble-borderold {
+    position: relative;
+    padding: 10px;
+    margin: 1em 0 0em;
+    border: 3px solid #CDD2D4;
+    color: #9C9797;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: small;
+}
+
+.bubble-borderold.left {
+   white-space: pre-wrap;
+    margin-left: 10px;
+    font-size: small;
+    word-wrap: break-word;     
+}
+
+
+.timespanold {
+   font-size: 9px;
+    font-weight: bold;    
+  padding-left: 150px;
+}
+
+#oldPanelbody {
+overflow-y: scroll;
+    height: 430px;
+
+}
+
+#oldpanel {
+   
+	    	
+	margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	margin: -10px;
+    border-color: #428bca;
+
+}
+
+
+
+
+
